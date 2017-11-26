@@ -218,7 +218,7 @@ p{
 .zsd {
     font-size:24px;
     height:34px;
-    line-height:29px;
+    line-height:34px;
     margin: 0 4px;
     padding:0 5px;
     display: inline-block;
@@ -231,7 +231,7 @@ p{
 .fnzs {
     font-size:24px;
     height:34px;
-    line-height:29px;
+    line-height:34px;
     margin: 0 4px;
     padding:0 5px;
     display: inline-block;
