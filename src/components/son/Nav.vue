@@ -1,52 +1,10 @@
 <template>
 <div class="clear">
   <div class="nav">
-    <div class="common_slider">
+    <div class="common_slider" v-for="item in navList">
       <a href="">
-        <img src="../../assets/img/slider-pic1.jpeg" alt="">
-        <p>美食</p>
-      </a>
-    </div>
-    <div class="common_slider">
-      <a href="">
-        <img src="../../assets/img/slider-pic2.jpeg" alt="">
-        <p>美食</p>
-      </a>
-    </div>
-    <div class="common_slider">
-      <a href="">
-        <img src="../../assets/img/slider-pic3.jpeg" alt="">
-        <p>美食</p>
-      </a>
-    </div>
-    <div class="common_slider">
-      <a href="">
-        <img src="../../assets/img/slider-pic4.jpeg" alt="">
-        <p>美食</p>
-      </a>
-    </div>
-    <div class="common_slider">
-      <a href="">
-        <img src="../../assets/img/slider-pic5.jpeg" alt="">
-        <p>美食</p>
-      </a>
-    </div>
-    <div class="common_slider">
-      <a href="">
-        <img src="../../assets/img/slider-pic6.jpeg" alt="">
-        <p>美食</p>
-      </a>
-    </div>
-    <div class="common_slider">
-      <a href="">
-        <img src="../../assets/img/slider-pic7.jpeg" alt="">
-        <p>美食</p>
-      </a>
-    </div>
-    <div class="common_slider">
-      <a href="">
-        <img src="../../assets/img/slider-pic8.jpeg" alt="">
-        <p>美食</p>
+        <img :src="'assets/img/'+item.image" alt="">
+        <p>{{item.title}}</p>
       </a>
     </div>
   </div>
@@ -104,6 +62,20 @@
   data () {
     return {
       msg: 'fdgfdgdf',
+      navList:[{
+
+      }],
+      navList:[
+          {id:1,title:"美食",image:"slider-pic1.jpeg"},
+          {id:2,title:"甜品饮品",image:"slider-pic2.jpeg"},
+          {id:3,title:"商店超市",image:"slider-pic3.jpeg"},
+          {id:4,title:"预定早餐",image:"slider-pic4.jpeg"},
+          {id:5,title:"果蔬生鲜",image:"slider-pic5.jpeg"},
+          {id:6,title:"新店特惠",image:"slider-pic6.jpeg"},
+          {id:7,title:"准时达",image:"slider-pic7.jpeg"},
+          {id:8,title:"夜宵",image:"slider-pic8.jpeg"}
+      ],
+
       productList:[
           {id:1,title:["品牌","上沙麦当劳"],image:"slider-pic1.jpeg",judge:4.7,price:20,delivery:5,service:["保","票","准"],judgeService:["准时达","蜂鸟专送"],distance:637,time:30},
           {id:1,title:["","正宗川味卤鸡蛋，味道好的很！"],image:"slider-pic1.jpeg",judge:3.5,price:20,delivery:0,service:["保","准"],judgeService:["准时达"],distance:347,time:20},
