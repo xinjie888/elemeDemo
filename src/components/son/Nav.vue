@@ -54,7 +54,6 @@
       </a>  
     </div>
   </div>
-  <div class="db"></div>
 </div>  
 </template>   
 <script>
@@ -266,9 +265,5 @@ p{
 }
 .com_blue {
     color: #0096ff;
-}
-.db{
-    width:960px;
-    height:96px;
 }
 </style>

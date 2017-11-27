@@ -11,7 +11,7 @@
       </div>
     </div>
     <div class="three_lan">
-        <router-link :class="index==1?'three_lan_ a border':'three_lan_ a'" to="" v-for="(tmp,index) in three">
+        <router-link v-for="(tmp,index) in three" :class="index==1?'three_lan_ a border':'three_lan_ a'" to="/order">
           <p  class="big_colorful">
             <span class="index-2FmrF_0" :style="index==0?'color:rgb(255,153,0)':index==1?'color:rgb(255,95,62)':index==2?'color:rgb(106,194,11)':''">{{tmp.tMsg}}</span><span  class="index-2V-Hh_0">{{tmp.danWei}}</span>
           </p>
