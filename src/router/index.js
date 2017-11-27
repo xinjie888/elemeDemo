@@ -3,9 +3,9 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import Homepage from '@/components/Homepage'
 
-import Order from '@/components/Homepage.1'
+import Order from '@/components/Order'
 
-import  Myzone from '@/components/Homepage.2'
+import  Myzone from '@/components/Myzone'
 Vue.use(Router)
 
 export default new Router({
@@ -15,12 +15,16 @@ export default new Router({
       name: 'Homepage',
       component: Homepage
     },{
-      path: '/order',
+      path: '/homepage',
       name: 'Homepage',
+      component: Homepage
+    },{
+      path: '/order',
+      name: 'Order',
       component: Order
     },{
       path: '/myzone',
-      name: 'Homepage',
+      name: 'Myzone',
       component: Myzone
     }
   ]

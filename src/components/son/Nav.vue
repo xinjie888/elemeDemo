@@ -9,9 +9,9 @@
     </div>
   </div>
   <h3 class="index_title">推存商家</h3>
-  <div>
+  <div class="main">
     <div v-for="tmp in productList">
-      <a style="display:block" href="">
+      <a class="clear" style="display:block" href="">
         <div class="business_img">
           <img :src="'assets/img/'+tmp.image" alt="">
         </div>
@@ -109,6 +109,10 @@
     display:block;
     clear:both;
 }
+body{
+      margin:0;
+      background:#f4f4f4;
+  }
 p{
     margin:0;
 }
@@ -116,6 +120,11 @@ p{
     display:flex;
     flex-wrap:wrap;
     justify-content:space-around;
+    background:#fff;
+    margin-bottom:19px;
+}
+.main{
+    background:#fff;
 }
 .common_slider {
     width:240px;
@@ -139,9 +148,10 @@ p{
     line-height:77px;
     font-weight: 600;
     background: #fff;
-    border-top: 20px solid #f4f4f4;
+    border-top: 1px solid #f4f4f4;
     font-size:38px;
     padding-left:38px;
+    margin:0;
 }
 .business_img{
     width:154px;
@@ -204,6 +214,7 @@ p{
 }
 .bzp i {
     font-style:normal;
+    vertical-align: middle;
 }
 .business_code{
     font-size:24px;
