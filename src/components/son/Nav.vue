@@ -213,6 +213,7 @@ p{
     border-radius:3px;
 }
 .bzp i {
+    display: block;
     font-style:normal;
     vertical-align: middle;
 }
