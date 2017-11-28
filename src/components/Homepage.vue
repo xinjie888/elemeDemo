@@ -10,7 +10,7 @@
   import Nav from './son/Nav'
   import Dnav from './son/Dnav'
   
-import { mapGetters } from 'vuex';
+  import { mapGetters } from 'vuex';
   export default {
   name: 'Homepage',
   components:{

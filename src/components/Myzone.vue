@@ -11,7 +11,7 @@
       </div>
     </div>
     <div class="three_lan">
-        <router-link v-for="(tmp,index) in three" :class="index==1?'three_lan_ a border':'three_lan_ a'" to="/order">
+        <router-link v-for="(tmp,index) in three" :key="index" :class="index==1?'three_lan_ a border':'three_lan_ a'" to="/order">
           <p  class="big_colorful">
             <span class="index-2FmrF_0" :style="index==0?'color:rgb(255,153,0)':index==1?'color:rgb(255,95,62)':index==2?'color:rgb(106,194,11)':''">{{tmp.tMsg}}</span><span  class="index-2V-Hh_0">{{tmp.danWei}}</span>
           </p>
@@ -56,17 +56,21 @@
       <span>饿了么会员卡</span>
     </div>
     <Dnav></Dnav>
+    <Modal @isModal="myModal" v-show="a" :parameter="myParm"></Modal>
+    <button @click="myClick">myClick</button>
   </div>
 </template>   
 <script>
   import Back from './son/Back'
   import Dnav from './son/Dnav'
+  import Modal from './son/Modal'
   import { mapGetters } from 'vuex';
   export default {
   name: 'Myzone',
   components:{
     Back,
-    Dnav
+    Dnav,
+    Modal
   },
   data () {
     return {
@@ -76,11 +80,31 @@
           {tMsg:"0.00",danWei:"元",tTitle:"余额"},
           {tMsg:3,danWei:"个",tTitle:"优惠"},
           {tMsg:6250,danWei:"分",tTitle:"积分"}
-      ]
+      ],
+      a:false,
+      myParm:{
+        btnQx:true,
+        btnOk:true,
+        title:"biaoti",
+        msg:"112233"
+      }
     }
+  },
+  methods:{
+      myClick(){
+        console.log(this.a);
+        this.a=!this.a;
+      },
+      myModal(msg){
+        console.log(msg);
+       this.a=msg;
+     }
   },
   mounted(){
      this.$store.dispatch('setWhichpage', 'myzone');
+  },
+  updated(){
+     
   }
 }
 </script>
