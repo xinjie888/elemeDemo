@@ -85,8 +85,8 @@
       myParm:{
         btnQx:true,
         btnOk:true,
-        title:"biaoti",
-        msg:"112233"
+        title:"提示",
+        msg:"确定执行此操作？"
       }
     }
   },

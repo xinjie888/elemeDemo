@@ -67,7 +67,7 @@
     color:#fff;
 }
 .gr{
-    background:green;
+    background:#00ff00;
 }
 .pstOk{
     position:absolute;
@@ -85,10 +85,13 @@
     font-size:70px;
     text-align:center;
     border-radius:30px 30px 0 0;
-    background:#00ff00;
+    background:red;
 }
 .dialog_text{
-    height:350px;
-    background:#f4f4f4
+    height:200px;
+    background:#f4f4f4;
+    text-align:center;
+    font-size:50px;
+    padding:70px;
 }
 </style>
