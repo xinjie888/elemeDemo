@@ -202,22 +202,20 @@ p{
     vertical-align: middle;
 }
 .bzp {
-    width:29px;
-    height:29px;
-    font-size:25px;
+    width:28.8px;
+    height:28.8px;
+    font-size:24.96px;
+    line-height:28.8px;
     text-align:center;
     display:inline-block;
     color:#999;
     border:1px solid #ddd;
-    margin:5px;
+    display: inline-block;
+    padding:2px;
     border-radius:3px;
 }
 .bzp i {
-    display:inline-block;
-    width:29px;
-    height:29px;
     font-style:normal;
-    line-height:29px;
 }
 .business_code{
     font-size:24px;
