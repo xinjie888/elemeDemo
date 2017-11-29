@@ -28,7 +28,7 @@
           this.$emit('isModal',this.myqx);
       },
       queDing(){
-          this.$router.push('/homepage');
+          this.$emit('confirm');
       },
       myEvent(e){
           e.stopPropagation();

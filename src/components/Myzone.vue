@@ -46,19 +46,17 @@
         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#discover.5811137">
         </use>
       </svg>
-      <span>饿了么会员卡</span>
+      <span>服务中心</span>
     </div>
     <div  class="some_bar">
       <svg class="v-md">
         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#index.18edf5a">
         </use>
       </svg>
-      <span>饿了么会员卡</span>
+      <span>下载饿了么APP</span>
     </div>
     <Dnav></Dnav>
-    <Modal @isModal="myModal" v-show="a" :parameter="myParm"></Modal>
-    
-    <div style="height:900px"></div>
+    <Modal @isModal="myModal" @confirm="confirmCallback" v-show="a" :parameter="myParm"></Modal>
   </div>
 </template>   
 <script>
@@ -88,6 +86,9 @@
         btnOk:true,
         title:"提示",
         msg:"确定执行此操作？"
+      },
+      myConfirm:function(){
+        return $router.push('/homepage');
       }
     }
   },
@@ -95,10 +96,14 @@
       myClick(){
         console.log(this.a);
         this.a=!this.a;
+
       },
       myModal(msg){
         console.log(msg);
        this.a=msg;
+     },
+     confirmCallback(){
+       this.$router.push('/homepage');
      }
   },
   mounted(){

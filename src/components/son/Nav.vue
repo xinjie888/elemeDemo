@@ -125,6 +125,7 @@ p{
 }
 .main{
     background:#fff;
+    margin-bottom:116px;
 }
 .common_slider {
     width:240px;
@@ -214,7 +215,6 @@ p{
 }
 .bzp i {
     font-style:normal;
-    vertical-align: middle;
 }
 .business_code{
     font-size:24px;
@@ -225,6 +225,9 @@ p{
     width:29px;
     height:29px;
     fill:#ffaa0c;
+}
+.code_num span{
+    line-height:29px;
 }
 .zsd {
     font-size:24px;
