@@ -21,9 +21,7 @@
               <span v-show="tmp.title[0]">{{tmp.title[0]}}</span>{{tmp.title[1]}}
             </h3>
             <div class="fr">
-              <div v-for="msg in tmp.service" class="bzp">
-                <i>{{msg}}</i>
-              </div>
+              <p v-for="msg in tmp.service" class="bzp">{{msg}}</p>
             </div>
           </section>
           <section class="business_code clear">
@@ -211,13 +209,8 @@ p{
     color:#999;
     border:1px solid #ddd;
     display: inline-block;
-    padding:1.5px;
     margin:5px;
     border-radius:3px;
-}
-.bzp i {
-    font-style:normal;
-    vertical-align: middle;
 }
 .business_code{
     font-size:24px;
