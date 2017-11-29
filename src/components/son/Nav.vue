@@ -215,6 +215,7 @@ p{
 }
 .bzp i {
     font-style:normal;
+    line-height:29px;
 }
 .business_code{
     font-size:24px;
