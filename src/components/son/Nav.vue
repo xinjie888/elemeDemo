@@ -211,7 +211,6 @@ p{
     color:#999;
     border:1px solid #ddd;
     display: inline-block;
-    padding:1px;
     margin:5px;
     border-radius:3px;
 }
