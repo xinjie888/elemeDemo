@@ -213,6 +213,9 @@ p{
     border-radius:3px;
 }
 .bzp i {
+    display:inline-block;
+    width:29px;
+    height:29px;
     font-style:normal;
     line-height:29px;
 }
