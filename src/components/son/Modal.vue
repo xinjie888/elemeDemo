@@ -1,13 +1,13 @@
 <template>
-  <div class="modal">
-    <div class="dialog">
+  <div @click="quXiao" class="modal">
+    <div @click="myEvent($event)" class="dialog">
       <h3 class="dialog_title">{{parameter.title}}</h3>
       <div class="dialog_text">{{parameter.msg}}</div>
       <div>
-        <button class="btn gr pstQx" @click="quXiao" v-show="parameter.btnQx">取消</button>
-        <button class="btn pstOk"  @click="queDing" v-show="parameter.btnOk">确定</button>
-      </div>
-    </div>
+        <div class="btn pstQx" @click="quXiao" v-show="parameter.btnQx">取消</div>
+        <div class="btn pstOk" @click="queDing" v-show="parameter.btnOk">确定</div>
+      </div> 
+    </div>   
   </div>  
 </template>
 <script>
@@ -29,6 +29,9 @@
       },
       queDing(){
           this.$router.push('/homepage');
+      },
+      myEvent(e){
+          e.stopPropagation();
       }
   },
   mounted(){
@@ -38,7 +41,7 @@
 </script>
 <style>
 .modal{
-    position:absolute;
+    position:fixed;
     top:0;
     left:0;
     width:100%;
@@ -48,50 +51,51 @@
 }
 .dialog{
     width:80%;
-    height:600px;
-    border-radius:30px;
+    height:400px;
+    border-radius:10px;
     position:absolute;
-    top:30%;
+    top:38%;
     left:10%;
-    background:#fff;
+    background:#f4f4f4;
     z-index:10001;
 }
 .btn{
-    width:180px;
-    height:80px;
-    border:0;
-    border-radius:10px;
-    outline:none;
-    font-weight:700;
-    background:red;
-    color:#fff;
-}
-.gr{
-    background:#00ff00;
+    display:inline-block;
+    width:50%;
+    height:110px;
+    line-height:110px;
+    text-align:center;
+    font-size:50px;
+    border-top:1px solid #ddd;
 }
 .pstOk{
     position:absolute;
-    bottom:20px;
-    right:50px;
+    bottom:0px;
+    right:0px;
+    border-radius:0 0 10px 0;
+    color:#26a2ff;
 }
 .pstQx{
     position:absolute;
-    bottom:20px;
-    left:50px;
+    bottom:0px;
+    left:0px;
+    border-radius:0 0 0 10px;
+    color:#000;
+    border-right:1px solid #ddd;
 }
 .dialog_title{
-    height:130px;
-    line-height:130px;
-    font-size:70px;
+    height:100px;
+    line-height:100px;
+    font-size:50px;
     text-align:center;
-    border-radius:30px 30px 0 0;
-    background:red;
+    border-radius:10px 10px 0 0;
+    margin-top:30px;
 }
 .dialog_text{
-    height:200px;
-    background:#f4f4f4;
+    height:110px;
+    line-height:110px;
     text-align:center;
     font-size:50px;
-    padding:70px;
+    color:#999;
 }
 </style>

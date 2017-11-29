@@ -27,7 +27,7 @@
         <span>我的订单</span>
       </div>
     </router-link>
-    <div  class="some_bar">
+    <div @click="myClick" class="some_bar">
       <svg class="v-md">
         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#shop">
         </use>
@@ -57,7 +57,8 @@
     </div>
     <Dnav></Dnav>
     <Modal @isModal="myModal" v-show="a" :parameter="myParm"></Modal>
-    <button @click="myClick">myClick</button>
+    
+    <div style="height:900px"></div>
   </div>
 </template>   
 <script>
