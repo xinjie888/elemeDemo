@@ -206,7 +206,6 @@ p{
     height:29px;
     font-size:25px;
     text-align:center;
-    line-height:29px;
     display:inline-block;
     color:#999;
     border:1px solid #ddd;
