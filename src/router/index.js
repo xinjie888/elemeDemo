@@ -2,10 +2,10 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import Homepage from '@/components/Homepage'
-
 import Order from '@/components/Order'
-
 import  Myzone from '@/components/Myzone'
+import  Login from '@/components/Login'
+
 Vue.use(Router)
 
 export default new Router({
@@ -26,6 +26,10 @@ export default new Router({
       path: '/myzone',
       name: 'Myzone',
       component: Myzone
+    },{
+      path: '/login',
+      name: 'Login',
+      component: Login
     }
   ]
 })

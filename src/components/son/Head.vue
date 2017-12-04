@@ -73,8 +73,9 @@
   .header{
     background:#0096ff;
     position:relative;
-    width:910px;
-    height:238px;
+    width:960px;
+    height:288px;
+    box-sizing:border-box;
     padding:24.96px;
     overflow:hidden;
   }

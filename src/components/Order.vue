@@ -53,8 +53,16 @@
       ]
     }
   },
+  created(){
+      //ifLogin==
+  },
   mounted(){
      this.$store.dispatch('setWhichpage', 'order');
+  },
+  created(){
+     if(sessionStorage.getItem("uname")==null){
+       this.$router.push('/login');
+     }
   }
 }
 </script>

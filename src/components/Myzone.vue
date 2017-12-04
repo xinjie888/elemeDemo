@@ -94,12 +94,11 @@
   },
   methods:{
       myClick(){
-        console.log(this.a);
+        //console.log(this.a);
         this.a=!this.a;
-
       },
       myModal(msg){
-        console.log(msg);
+        //console.log(msg);
        this.a=msg;
      },
      confirmCallback(){
@@ -109,8 +108,10 @@
   mounted(){
      this.$store.dispatch('setWhichpage', 'myzone');
   },
-  updated(){
-     
+  created(){
+     if(sessionStorage.getItem("uname")==null){
+       this.$router.push('/login');
+     }
   }
 }
 </script>

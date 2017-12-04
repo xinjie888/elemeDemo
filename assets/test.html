@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">-->
+    <script src="js/flexible.js"></script>
+    <title>my-project</title>
+    <style type="text/css">
+        div{
+            width: .3rem;
+    height: 2.4rem;
+    font-size: .26rem;
+    line-height: 2.4rem;
+    text-align: center;
+    color: #999;
+    
+    display: inline-block;
+    margin: .05208rem;
+    border-radius: .03125rem;
+    
+    background: green;
+    color:#FFF;
+    box-sizing:     border-box;
+    font-family: Helvetica Neue, Tahoma, Arial, PingFangSC-Regular, Hiragino Sans GB, Microsoft Yahei, sans-serif
+        }
+    </style>
+  </head>
+  <body>
+    <!-- built files will be auto injected -->
+    <div id="test">保</div>
+<script>
+    var style =getComputedStyle(test,null);
+    alert(test.offsetHeight+","+style.lineHeight+",");
+    alert(document.querySelector("meta[name=viewport]").content);
+
+
+</script>
+  </body>
+</html>

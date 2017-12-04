@@ -24,6 +24,7 @@
     }
   },
   mounted(){
+     //sessionStorage.setItem("uname",0);
      this.$store.dispatch('setWhichpage', 'homepage');
   }
 }

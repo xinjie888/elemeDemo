@@ -200,12 +200,11 @@ p{
     vertical-align: middle;
 }
 .bzp {
-    width:28.8px;
-    height:28.8px;
-    font-size:24.96px;
-    line-height:28.8px;
+    width:29px;
+    height:29px;
+    font-size:25px;
+    line-height:29px;
     text-align:center;
-    display:inline-block;
     color:#999;
     border:1px solid #ddd;
     display: inline-block;
