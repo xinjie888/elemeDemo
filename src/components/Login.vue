@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Back title="登录"></Back>
+    <Back title="登录" :page="page"></Back>
     <div class="input_login">
       <input type="text" placeholder="用户名" v-model="uname">
       <input type="password" placeholder="密码" v-model="upwd">
@@ -30,6 +30,7 @@
         title:"提示",
         msg:""
       },
+      page:this.$route.params.id
     }
   },
   methods:{
@@ -51,6 +52,7 @@
      }
   },
   mounted(){
+    console.log(this.$route.params.id);
      this.$store.dispatch('setWhichpage', 'homepage');
   }
 }

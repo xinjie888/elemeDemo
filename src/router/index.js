@@ -27,7 +27,7 @@ export default new Router({
       name: 'Myzone',
       component: Myzone
     },{
-      path: '/login',
+      path: '/login/:id',
       name: 'Login',
       component: Login
     }

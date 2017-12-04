@@ -14,7 +14,7 @@
 <script>
   export default {
   name: 'Back',
-  props:["title"],
+  props:["title","page"],
   components:{
   },
   data () {
@@ -24,7 +24,9 @@
   },
   methods: {
     back_one () {
-      if(sessionStorage.getItem("uname")==null){
+      if(sessionStorage.getItem("uname")==null&&this.page=="homepage"){
+        this.$router.go(-1);
+      }else if(sessionStorage.getItem("uname")==null){
         this.$router.go(-2);
       }else{
         this.$router.go(-1);

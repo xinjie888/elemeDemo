@@ -110,7 +110,7 @@
   },
   beforeCreate(){
      if(sessionStorage.getItem("uname")==null){
-       this.$router.push('/login');
+       this.$router.push('/login/1');
      }
   }
 }

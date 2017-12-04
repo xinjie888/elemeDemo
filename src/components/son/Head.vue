@@ -8,7 +8,7 @@
       <span class="haed_dizhi">深圳市福田区这里是个假定位村淡定啦~这不重要</span>
     </div>
     <div class="index_login" v-if="!getLogin">
-      <router-link v-show="isLogin==null" to="/login">登录</router-link>
+      <router-link v-show="isLogin==null" :to="'/login/'+page">登录</router-link>
     </div>
   </div> 
   <div class="search_box">
@@ -57,7 +57,8 @@
   data () {
     return {
       msg: 'fdgfdgdf',
-      isLogin:sessionStorage.getItem("uname")
+      isLogin:sessionStorage.getItem("uname"),
+      page:"homepage"
     }
   }
 }
