@@ -59,7 +59,7 @@
   mounted(){
      this.$store.dispatch('setWhichpage', 'order');
   },
-  created(){
+  beforeCreate(){
      if(sessionStorage.getItem("uname")==null){
        this.$router.push('/login');
      }

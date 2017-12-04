@@ -108,7 +108,7 @@
   mounted(){
      this.$store.dispatch('setWhichpage', 'myzone');
   },
-  created(){
+  beforeCreate(){
      if(sessionStorage.getItem("uname")==null){
        this.$router.push('/login');
      }

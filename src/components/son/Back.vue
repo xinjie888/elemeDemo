@@ -24,7 +24,11 @@
   },
   methods: {
     back_one () {
-      this.$router.go(-1);
+      if(sessionStorage.getItem("uname")==null){
+        this.$router.go(-2);
+      }else{
+        this.$router.go(-1);
+      }
     }
   }
 }
