@@ -28,7 +28,7 @@
           var item=e.currentTarget;
           var endPageX=e.changedTouches[0].pageX;
           var juli=endPageX-this.startPageX;
-          if(juli>300){
+          if(juli>this.itemWidth/2){
             if(item.index==0){
               this.items[this.items.length-1].style.cssText="left:0px;transition:all .3s linear;";
               li[li.length-1].className="li";
@@ -38,14 +38,14 @@
             }
             item.style.cssText="left:"+this.itemWidth+"px;transition:all .3s linear;";
             li[item.index].className="";
-          }else if(juli<=300 && juli>0){
+          }else if(juli<=this.itemWidth/2 && juli>0){
             if(item.index==0){
               this.items[this.items.length-1].style.cssText="left:-"+this.itemWidth+"px;transition:all .3s linear;";
             }else{
               item.previousElementSibling.style.cssText="left:-"+this.itemWidth+"px;transition:all .3s linear;";
             }
             item.style.cssText="left:0px;transition:all .3s linear;";
-          }else if(juli<-300){
+          }else if(juli<-1*(this.itemWidth/2)){
             if(item.index==this.items.length-1){
               this.items[0].style.cssText="left:0px;transition:all .3s linear;";
               li[0].className="li";
@@ -55,7 +55,7 @@
             }
             item.style.cssText="left:-"+this.itemWidth+"px;transition:all .3s linear;";
             li[item.index].className="";
-          }else if(juli>-300 && juli<0){
+          }else if(juli>-1*(this.itemWidth/2) && juli<0){
             if(item.index==this.items.length-1){
               this.items[0].style.cssText="left:"+this.itemWidth+"px;transition:all .3s linear;";
             }else{
