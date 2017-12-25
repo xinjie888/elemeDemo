@@ -7,7 +7,7 @@
       </svg>
       <span class="haed_dizhi">深圳市福田区这里是个假定位村淡定啦~这不重要</span>
     </div>
-    <div class="index_login" v-if="!getLogin">
+    <div class="index_login" v-if="!isLogin">
       <router-link v-show="isLogin==null" :to="'/login/'+page">登录</router-link>
     </div>
   </div> 
