@@ -1,9 +1,9 @@
 <template>
   <div id="swipe">
     <slot></slot>
-    <div id="db">
+    <div id="db" v-show="isDb">
       <ul>
-        <li v-for="item in list" v-if=""></li>
+        <li v-for="item in list"></li>
       </ul>
     </div>
   </div>
@@ -14,6 +14,7 @@
   components:{
     
   },
+  props:["isDb"],
   data () {
     return {
       msg: 'fdgfdgdf',
