@@ -22,10 +22,11 @@
     }
   },
   mounted(){
-    this.list=[1,2]//document.querySelectorAll(".swipe-item");
+    this.list=document.querySelectorAll(".swipe-item");
     var swipeWidth=this.list[0].children[0].offsetWidth;
     var swipeHeight=this.list[0].children[0].offsetHeight;
     document.getElementById("swipe").style.cssText="width:"+swipeWidth+"px;height:"+swipeHeight+"px;";
+    this.list=[1,2]
     this.$nextTick(function () {
       document.querySelector("#db ul li").className="li";
     })
