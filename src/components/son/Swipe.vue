@@ -25,7 +25,7 @@
     this.list=document.querySelectorAll(".swipe-item");
     var swipeWidth=this.list[0].children[0].offsetWidth;
     var swipeHeight=this.list[0].children[0].offsetHeight;
-    console.log(this.list[0].children[0].offsetHeight);
+    alert(this.list.length);
     document.getElementById("swipe").style.cssText="width:"+swipeWidth+"px;height:"+swipeHeight+"px;";
     this.$nextTick(function () {
       document.querySelector("#db ul li").className="li";
