@@ -26,7 +26,7 @@
     var swipeWidth=this.list[0].children[0].offsetWidth;
     var swipeHeight=this.list[0].children[0].offsetHeight;
     document.getElementById("swipe").style.cssText="width:"+swipeWidth+"px;height:"+swipeHeight+"px;";
-    this.list=[1,2]
+    this.list = [].slice.call(this.list,0);
     this.$nextTick(function () {
       document.querySelector("#db ul li").className="li";
     })
